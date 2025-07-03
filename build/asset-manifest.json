@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/TON-REPO/static/css/main.6d254b39.css",
+    "main.js": "/TON-REPO/static/js/main.4335e1c1.js",
+    "index.html": "/TON-REPO/index.html",
+    "main.6d254b39.css.map": "/TON-REPO/static/css/main.6d254b39.css.map",
+    "main.4335e1c1.js.map": "/TON-REPO/static/js/main.4335e1c1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6d254b39.css",
+    "static/js/main.4335e1c1.js"
+  ]
+}
