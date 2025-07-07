@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { personalInfo } from '../data/portfolio';
+import { useTranslation } from 'react-i18next';
 
 // Sous-composant Avatar professionnel
 interface AvatarProps {
@@ -31,6 +32,7 @@ const Avatar: React.FC<AvatarProps> = ({ src, alt, fallback }) => (
 );
 
 const About: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <section id="about" className="section" aria-labelledby="about-title">
       <div className="container">
@@ -41,9 +43,9 @@ const About: React.FC = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 id="about-title" className="section-title">À propos de moi</h2>
+          <h2 id="about-title" className="section-title">{t('about_title')}</h2>
           <p className="section-subtitle">
-            Découvrez mon parcours et ma passion pour le développement
+            {t('about_subtitle')}
           </p>
         </motion.div>
 

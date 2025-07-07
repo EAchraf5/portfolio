@@ -1,0 +1,17 @@
+{
+  "about_title": "Über mich",
+  "about_subtitle": "Entdecken Sie meinen Werdegang und meine Leidenschaft für Entwicklung",
+  "projects_title": "Meine Projekte",
+  "contact_title": "Kontakt",
+  "projects_all": "Alle Projekte",
+  "projects_featured": "Empfohlene Projekte",
+  "contact_name": "Vollständiger Name",
+  "contact_name_placeholder": "Ihr Name",
+  "contact_email": "E-Mail",
+  "contact_email_placeholder": "ihre@email.de",
+  "contact_subject": "Betreff",
+  "contact_subject_placeholder": "Betreff Ihrer Nachricht",
+  "contact_message": "Nachricht",
+  "contact_message_placeholder": "Ihre Nachricht...",
+  "contact_send": "Nachricht senden"
+} 

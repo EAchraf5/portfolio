@@ -3,9 +3,11 @@ import { motion } from 'framer-motion';
 import { FiGithub, FiExternalLink, FiStar } from 'react-icons/fi';
 import { projects } from '../data/portfolio';
 import { Project } from '../types';
+import { useTranslation } from 'react-i18next';
 
 const Projects: React.FC = () => {
   const [filter, setFilter] = useState<'all' | 'featured'>('all');
+  const { t } = useTranslation();
 
   const filteredProjects = filter === 'featured' 
     ? projects.filter(project => project.featured)
@@ -31,7 +33,7 @@ const Projects: React.FC = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="section-title">Mes Projets</h2>
+          <h2 className="section-title">{t('projects_title')}</h2>
           <p className="section-subtitle">
             Découvrez mes réalisations les plus récentes et mes projets en cours
           </p>
@@ -53,7 +55,7 @@ const Projects: React.FC = () => {
                 : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
             }`}
           >
-            Tous les projets
+            {t('projects_all')}
           </button>
           <button
             onClick={() => setFilter('featured')}
@@ -64,7 +66,7 @@ const Projects: React.FC = () => {
             }`}
           >
             <FiStar />
-            Projets vedettes
+            {t('projects_featured')}
           </button>
         </motion.div>
 

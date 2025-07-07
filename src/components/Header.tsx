@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FiMenu, FiX } from 'react-icons/fi';
+import { useTranslation } from 'react-i18next';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { i18n } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,7 +54,7 @@ const Header: React.FC = () => {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-8 items-center">
             {navItems.map((item, index) => (
               <motion.button
                 key={item.name}
@@ -67,6 +69,18 @@ const Header: React.FC = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
               </motion.button>
             ))}
+            {/* Sélecteur de langue */}
+            <select
+              className="ml-4 px-2 py-1 rounded bg-gray-800 text-gray-200 border border-gray-700 focus:outline-none"
+              value={i18n.language}
+              onChange={e => i18n.changeLanguage(e.target.value)}
+              aria-label="Choisir la langue"
+            >
+              <option value="fr">Français</option>
+              <option value="en">English</option>
+              <option value="de">Deutsch</option>
+              <option value="ar">العربية</option>
+            </select>
           </nav>
 
           {/* Mobile Menu Button */}

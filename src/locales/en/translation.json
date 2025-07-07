@@ -1,0 +1,17 @@
+{
+  "about_title": "About Me",
+  "about_subtitle": "Discover my background and passion for development",
+  "projects_title": "My Projects",
+  "contact_title": "Contact",
+  "projects_all": "All projects",
+  "projects_featured": "Featured projects",
+  "contact_name": "Full name",
+  "contact_name_placeholder": "Your name",
+  "contact_email": "Email",
+  "contact_email_placeholder": "your@email.com",
+  "contact_subject": "Subject",
+  "contact_subject_placeholder": "Subject of your message",
+  "contact_message": "Message",
+  "contact_message_placeholder": "Your message...",
+  "contact_send": "Send message"
+} 

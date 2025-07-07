@@ -1,0 +1,17 @@
+{
+  "about_title": "معلومات عني",
+  "about_subtitle": "اكتشف مسيرتي وشغفي بالتطوير",
+  "projects_title": "مشاريعي",
+  "contact_title": "اتصل",
+  "projects_all": "كل المشاريع",
+  "projects_featured": "المشاريع المميزة",
+  "contact_name": "الاسم الكامل",
+  "contact_name_placeholder": "اسمك",
+  "contact_email": "البريد الإلكتروني",
+  "contact_email_placeholder": "you@email.com",
+  "contact_subject": "الموضوع",
+  "contact_subject_placeholder": "موضوع رسالتك",
+  "contact_message": "الرسالة",
+  "contact_message_placeholder": "اكتب رسالتك...",
+  "contact_send": "إرسال الرسالة"
+} 

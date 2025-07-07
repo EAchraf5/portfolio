@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiMail, FiPhone, FiMapPin, FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
 import { personalInfo } from '../data/portfolio';
+import { useTranslation } from 'react-i18next';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +11,7 @@ const Contact: React.FC = () => {
     subject: '',
     message: ''
   });
+  const { t } = useTranslation();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -35,7 +37,7 @@ const Contact: React.FC = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="section-title">Contact</h2>
+          <h2 className="section-title">{t('contact_title')}</h2>
           <p className="section-subtitle">
             N'hésitez pas à me contacter pour discuter de vos projets
           </p>
@@ -157,7 +159,7 @@ const Contact: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-gray-300 mb-2">
-                      Nom complet *
+                      {t('contact_name')} *
                     </label>
                     <input
                       type="text"
@@ -167,13 +169,13 @@ const Contact: React.FC = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors duration-300"
-                      placeholder="Votre nom"
+                      placeholder={t('contact_name_placeholder')}
                     />
                   </div>
                   
                   <div>
                     <label htmlFor="email" className="block text-gray-300 mb-2">
-                      Email *
+                      {t('contact_email')} *
                     </label>
                     <input
                       type="email"
@@ -183,14 +185,14 @@ const Contact: React.FC = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors duration-300"
-                      placeholder="votre@email.com"
+                      placeholder={t('contact_email_placeholder')}
                     />
                   </div>
                 </div>
 
                 <div>
                   <label htmlFor="subject" className="block text-gray-300 mb-2">
-                    Sujet *
+                    {t('contact_subject')} *
                   </label>
                   <input
                     type="text"
@@ -200,13 +202,13 @@ const Contact: React.FC = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors duration-300"
-                    placeholder="Sujet de votre message"
+                    placeholder={t('contact_subject_placeholder')}
                   />
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-gray-300 mb-2">
-                    Message *
+                    {t('contact_message')} *
                   </label>
                   <textarea
                     id="message"
@@ -216,7 +218,7 @@ const Contact: React.FC = () => {
                     required
                     rows={6}
                     className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors duration-300 resize-none"
-                    placeholder="Votre message..."
+                    placeholder={t('contact_message_placeholder')}
                   />
                 </div>
 
@@ -226,7 +228,7 @@ const Contact: React.FC = () => {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  Envoyer le message
+                  {t('contact_send')}
                 </motion.button>
               </form>
             </motion.div>
